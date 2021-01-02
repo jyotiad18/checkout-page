@@ -238,6 +238,13 @@ header > h1 {
   cursor: pointer;
 }
 
+.product__addremove > span {
+  font-family: var(--fm-primary);
+  font-size: 16px;
+  font-style: var(--fs-normal);
+  font-weight: 600;
+}
+
 .main__shipping {
   margin-top: 30px;
 }

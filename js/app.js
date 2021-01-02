@@ -39,6 +39,10 @@ function getNumber(value)
 	return  parseFloat(value.substring(1));		
 }
 
-function validateForm() {	
-	alert('Thank you for your information');	
+function validateForm(e) {	
+	if (subTotal > 0) {
+		alert('Thank you for your information.');
+	} else {
+		alert('Please, add your product.')
+	}
 }
