@@ -7,89 +7,130 @@
       content="width=device-width, initial-scale=1,
   maximum-scale=5"
     />
-
-    <link rel="icon" href="devchallenges.png" />
-
+    <link rel="icon" href="images/devchallenges.png" />
     <link
       rel="shortcut icon"
       type="image/x-icon"
       href="https://devchallenges.io/"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-
-    <title>Devchallenges</title>
-
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-
-      ul {
-        padding-left: 24px;
-      }
-
-      li {
-        margin-bottom: 8px;
-      }
-
-      .welcome {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .welcome-text {
-        margin-top: 30vh;
-        font-weight: 500;
-      }
-
-      .welcome-text p {
-        font-size: 1rem;
-        font-weight: 400;
-      }
-
-      .welcome-text h1 {
-        font-size: 1.5rem;
-      }
-
-      .welcome-text a {
-        color: #f7542e;
-      }
-    </style>
+    /> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet" />  
+    <title>Checkout Page</title>
   </head>
   <body>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>
-          Welcome to
-          <a href="https://devchallenges.io/" target="_blank"
-            >devchallenges.io</a
-          >
-        </h1>
-
-        <p>
-          If you have any questions, don't hesitate to ask on Discord. Here are
-          7 general steps to complete the challenge:
-        </p>
-      </div>
-
-      <ul>
-        <li><b>Step 1:</b> Create a new repository on github</li>
-        <li><b>Step 2:</b> Copy resources, README.md to your repository</li>
-        <li>
-          <b>Step 3:</b> Login to Figma to checkout font, color, spacing,..
-        </li>
-        <li><b>Step 4:</b> Complete all user stories</li>
-        <li><b>Step 5:</b> Update README.md</li>
-        <li><b>Step 6:</b> Deploy your app and submit your solution</li>
-        <li>
-          <b>Step 7:</b> Share your solution on Discord, Twitter and other
-          platforms to ask for feedback
-        </li>
-      </ul>
+   <header>
+    <h1>Checkout</h1>
+   </header>
+   <div class="main">
+    <div class="main__left">
+      <form onsubmit="return validateForm()">
+        <fieldset>
+          <legend>Contact information</legend>
+          <label for="email">E-mail</label>
+          <div class="input__details">
+            <i class="material-icons md-24">email</i>
+            <input required="Enter your valid email." type="email" id="email" placeholder="Enter your email...">
+          </div>
+          <label for="phone">Phone</label>
+          <div class="input__details">
+            <i class="material-icons md-24">phone</i>
+            <input required="Enter your valid phone." type="text" id="phone" placeholder="Enter your phone...">
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Shipping address</legend>
+          <label for="fullname">Full name</label>
+          <div class="input__details">
+            <i class="material-icons md-24">person</i>
+            <input required="Enter your fullname." type="text" id="fullname" placeholder="Your name...">
+          </div>
+          <label for="address">Address</label>
+          <div class="input__details">
+            <i class="material-icons md-24">home</i>
+            <input required="Enter your valid address." type="text" id="address" placeholder="Your address...">
+          </div>
+          <label for="city">City</label>
+          <div class="input__details">
+            <i class="material-icons md-24">location_city</i>
+            <input required="Entery your valid city." type="text" id="city" placeholder="Your city...">
+          </div>
+          <div class="multiple__inputs">
+            <div>
+              <label for="country">Country</label>
+              <div class="input__details">
+                <i class="material-icons md-24">public</i>
+                <select required="Select valid country." name="country" id="country">
+                  <option value="">Your country...</option>
+                  <option value="np">Nepal</option>
+                  <option value="fr">France</option>
+                  <option value="us">USA</option>
+                  <option value="esp">Spain</option>
+                  <option value="bhu">Bhutan</option>
+                </select>
+              </div> 
+            </div>
+            <div>
+              <label for="postalcode">Postal Code</label>
+              <div class="input__details">
+                <i class="material-icons md-24">markunread_mailbox</i>
+                <input required="Enter your valid postalcode." type="number" id="postalcode" placeholder="Your postalcode...">
+              </div>
+            </div>
+          </div>          
+        </fieldset>
+        <div class="input__checkbox">
+          <input type="checkbox" id="remeber" name="remeber">
+          <label for="remeber">Save this information for next time</label>          
+        </div>
+        <button type="submit" class="submit__button"> Continue </button>
+      </form>
     </div>
+    <div class="main__right">
+      <div class="main__product">
+        <img src="./images/photo1.png" alt="" />
+        <div class="main__product__info">
+            <div class="product__details">
+                <h1 class="product__name">Vintage Backpack<h1>
+                <div class="product__prices">
+                  <h3 class="product__price">$54.99</h3>
+                  <h3 class="product__oldprice">$94.99</h3>
+                </div>
+            </div>
+            <div class="product__addremove">
+              <i class="material-icons md-24">remove</i>
+              <span>0</span>
+              <i class="material-icons md-24 ">add</i>
+            </div>
+        </div>
+      </div>
+      <div class="main__product">
+        <img src="./images/photo2.png" alt="" />
+          <div class="main__product__info"> 
+                <div class="product__details">
+                  <h1 class="product__name">Levi Shoes<h1>              
+                  <div class="product__prices">
+                    <h3 class="product__price">$74.99</h3>
+                    <h3 class="product__oldprice">$124.99</h3> 
+                  </div>
+                </div>
+              <div class="product__addremove"> 
+                <i class="material-icons md-24">remove</i>
+                <span>0</span>
+                <i class="material-icons md-24">add</i>
+              </div>
+        </div>
+      </div>
+      <div class="main__shipping">
+        <h4>Shipping</h4>
+        <span>$19</span>
+      </div>        
+      <div class="main__total">
+        <h4>Total</h4>
+        <span>$0</span>
+      </div>
+    </div>
+   </div>
+   <footer> Jyoti ADHIKARI @ DevChallenges.io </footer>
+  <script src="./js/app.js"></script>
   </body>
 </html>
