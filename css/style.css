@@ -21,7 +21,7 @@
 
 body {
   margin: 0 auto;
-  max-width: 1100px;
+  max-width: 1440px;
   padding: 40px 60px 10px 60px;
   color: var(--ff-color);
   background-color: white;
@@ -72,6 +72,7 @@ header > h1 {
   justify-content: space-between;
   margin-top: 10px;
 }
+
 .main__left {
   display: flex;
   flex: 0.7;
@@ -98,9 +99,13 @@ header > h1 {
   font-weight: 600;
 }
 
-.input__details > select {
-  width: 180px;
+.input__details--select {
+  width: 300px;
 }
+/*.input__details > select {
+  width: 146px !important;
+}
+*/
 
 .input__details > input:focus,
 .input__details > select:focus {
@@ -276,21 +281,81 @@ footer {
   margin-top: 40px;
 }
 
-@media (max-width: 1050px) {
-  .main {
-    flex-direction: column-reverse;
-    margin-top: 10px;
+@media (max-width: 1024px) {
+  body {
+    padding: 20px 15px;
+  }
+  form {
+    width: 100%;
+  }
+  .main__left {
+    flex: 0.7;
   }
   .main__right {
-    width: 100%;
-    border-radius: 12px;
-    padding: 20px;
-    height: auto;
+    flex: 0.3;
+    padding: 10px;
+  }
+  .submit__button {
+    margin-top: 10px;
+    margin-left: auto;
+  }
+
+  .input__details--select {
+    width: 280px !important;
+  }
+}
+
+@media (max-width: 637px) {
+  body {
+    padding: 32px 18px;
+  }
+  .main {
+    flex-direction: column-reverse;
+  }
+  .main__right {
+    flex: 1;
+    padding: 10px;
   }
 
   .main__left {
+    flex: 1;
     width: auto;
   }
+
+  form {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .multiple__inputs {
+    flex-direction: column;
+  }
+  .submit__button {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+  .input__details--select {
+    width: 91% !important;
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    padding: 32px 10px;
+  }
+  .main {
+    flex-direction: column-reverse;
+  }
+  .main__right {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .main__left {
+    flex: 1;
+    width: auto;
+  }
+
   form {
     margin-top: 10px;
     width: 100%;
@@ -301,7 +366,48 @@ footer {
   .submit__button {
     margin-top: 10px;
   }
-  .input__details > select {
-    width: 100%;
+  .product__name {
+    font-family: var(--fm-primary);
+    font-size: 12px;
+    font-weight: 600;
+    font-style: var(--fs-normal);
+  }
+
+  .product__prices {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .product__price {
+    font-family: var(--fm-primary);
+    color: var(--ff-color-orange);
+    font-size: 12px;
+    margin-right: 5px;
+    font-style: var(--fs-normal);
+  }
+
+  .product__oldprice {
+    font-family: var(--fm-primary);
+    font-size: 10px;
+    font-style: var(--fs-normal);
+    text-decoration: line-through;
+  }
+
+  .product__addremove {
+    border: 1px solid #4e5150;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+    border-radius: 12px;
+    padding: 10px;
+    margin-top: auto;
+  }
+  .main__product > img {
+    height: 100px;
+    width: 100px;
+    border-radius: 12px;
   }
 }
